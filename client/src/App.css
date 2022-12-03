@@ -59,3 +59,22 @@ body{
   font-size: 13px;
   color: white;
 }
+.body>.but{
+  position: absolute;
+  top: 60%;
+  left: 9%;
+  width: 200px;
+  height: 90px;
+}
+.but .button{
+  height: 50px;
+  color: black;
+  width: 150px;
+  font-size: 16px;
+  font-weight: bold;
+  background:  linear-gradient(95.7deg,#2bf2ff .32%,#01c3f1 100.26%)
+}
+.but .button:hover{
+  color: black;
+  background:  linear-gradient(95.7deg,#2bf2ff .32%,#01c3f1 100.26%)
+}
