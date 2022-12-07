@@ -11,8 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@splinetool/react-spline": "^2.2.3",
-    "@splinetool/runtime": "^0.9.144",
     "apollo-server": "^2.5.0",
     "bcryptjs": "^2.4.3",
     "graphql": "^14.3.1",

@@ -1,5 +1,6 @@
 import React from "react";
 import AuthRoute from '../util/AuthRoute';
+import { AuthProvider } from "../context/auth";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Container } from 'semantic-ui-react';
 import MenuBar from '../components/MenuBar';
@@ -11,12 +12,34 @@ import SinglePost from './SinglePost';
 function Start(){
     return(
         <>
-        <MenuBar />
+        
+        <Container>
+        <div className='body'>
+          <div className="left">
+            <span>ALUMNI INTERACTION PLATFORM</span>
+            <h1>BENNE<span>TT</span></h1>
+            <img className='image' src="https://imageio.forbes.com/specials-images/imageserve/62380c71af36178f0f91f59d/0x0.jpg?format=jpg&width=1200" alt="img" />
+            <h1 className='next'>GRAM</h1>
+          </div>
+          <div className="but">
+          <a href="/home" target="_blank">Get Started</a>
+            {/* <Button onClick={<Start/>}> Get Started </Button> */}
+          </div>         
+          {/* <Start></Start> */}
+        </div>
+          {/* <MenuBar />
           <Route exact path="/" component={Home} />
+          <AuthRoute exact path="/login" component={Login} />
+          <AuthRoute exact path="/register" component={Register} />
+          <Route exact path="/posts/:postId" component={SinglePost} /> */}
+          
+        </Container>
+        {/* <MenuBar />
+          <Route exact path="/home" component={Home} />
           <Route path="/start" component={Start} />
           <AuthRoute exact path="/login" component={Login} />
           <AuthRoute exact path="/register" component={Register} />
-          <Route exact path="/posts/:postId" component={SinglePost} />
+          <Route exact path="/posts/:postId" component={SinglePost} /> */}
         </>
     );
 }
