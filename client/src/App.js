@@ -15,11 +15,6 @@ import SinglePost from './pages/SinglePost';
 import Start from './pages/Start';
 
 function App() {
-  // let navigate = useNavigate(); 
-  // const routeChange = () =>{ 
-  //   let path = `newPath`; 
-  //   navigate(path);
-  // }
   return (
     <>
       <AuthProvider>
@@ -30,11 +25,8 @@ function App() {
           <AuthRoute exact path="/register" component={Register} />
           <Route exact path="/posts/:postId" component={SinglePost} />
         </Router>
-
       </AuthProvider>
-
     </>
-
   );
 }
 

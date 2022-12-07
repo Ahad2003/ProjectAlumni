@@ -2,9 +2,9 @@ import React, { useContext, useState } from 'react';
 import { Button, Form } from 'semantic-ui-react';
 import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
-
 import { AuthContext } from '../context/auth';
 import { useForm } from '../util/hooks';
+import MenuBar from '../components/MenuBar';
 
 function Login(props) {
   const context = useContext(AuthContext);
@@ -36,7 +36,9 @@ function Login(props) {
   }
 
   return (
-    <div className="form-container">
+    <>
+    <MenuBar/>
+      <div className="form-container">
       <Form onSubmit={onSubmit} noValidate className={loading ? 'loading' : ''}>
         <h1>Login</h1>
         <Form.Input
@@ -71,6 +73,7 @@ function Login(props) {
         </div>
       )}
     </div>
+    </>
   );
 }
 

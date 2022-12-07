@@ -5,6 +5,7 @@ import gql from 'graphql-tag';
 
 import { AuthContext } from '../context/auth';
 import { useForm } from '../util/hooks';
+import MenuBar from '../components/MenuBar';
 
 function Register(props) {
   const context = useContext(AuthContext);
@@ -38,7 +39,9 @@ function Register(props) {
   }
 
   return (
-    <div className="form-container">
+    <>
+    <MenuBar/>
+      <div className="form-container">
       <Form onSubmit={onSubmit} noValidate className={loading ? 'loading' : ''}>
         <h1>Register</h1>
         <Form.Input
@@ -91,6 +94,7 @@ function Register(props) {
         </div>
       )}
     </div>
+    </>
   );
 }
 
